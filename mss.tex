@@ -14,8 +14,8 @@
 \fancyhead{}
 \fancyfoot[L]{{\footnotesize
               %% We toggle between these:
-              Manuscript submitted for review.\\
-              % {\it Urbit Systems Technical Journal} I:1 (2024):  1–3. \\
+              % Manuscript submitted for review.\\
+              {\it Urbit Systems Technical Journal} I:2 (2024):  65–85. \\
               ~ \\
               Address author correspondence to \authorpatp.
               }}
@@ -42,13 +42,13 @@
 
 % We will adjust page numbering in final editing.
 \pagenumbering{arabic}
-\setcounter{page}{1}
+\setcounter{page}{65}
 
 \tableofcontents
 
 \section{Ad Fontes}
 
-\sloppy
+\noindent\sloppy
 \emph{The original Ad Fontes proposal was produced by \patp{ritpub-sipsyl} on \texttt{\textasciitilde 2022.12.2} and revised through \texttt{\textasciitilde 2022.12.10}.}
 
 \subsection{In Principio}
@@ -138,6 +138,7 @@ Local networks, by contrast, generally permit and even depend on broadcast behav
 
 \section{Response}
 
+\noindent\sloppy
 \emph{This appendix is a response by \patp{rovyns-ricfer} to the original document on \texttt{\textasciitilde 2022.12.10} and revised through \texttt{\textasciitilde 2023.1.10}.}
 
 \patp{ritpub-sipsyl} wrote up the philosophy for an Urbit networking paradigm that could be used to realize several different dreams:
@@ -279,7 +280,7 @@ path:  /~zod/2/3/c/x/4/base/sys/hoon/hoon
 value: [~ %hoon '::  hoon 141k\0a...']
 \end{lstlisting}
 
-The value in any permanent response is a (unit [mark noun]).
+The value in any permanent response is a \lstinline[style=inlinecode]{(unit [mark noun])}.
 
 \paragraph{Negative Response (Permanent, Value Is Absent)} \mbox{}\\
 
@@ -363,6 +364,8 @@ value: &
 
 If the receiver performed the command, it emits a response on the requested ack path with a value of \lstinline[style=inlinecode]{&} (``yes'').
 
+\pagebreak{}
+
 \paragraph{Negative Response (Nack)} \mbox{}\\
 
 \begin{lstlisting}[style=listingcode]
@@ -395,6 +398,8 @@ The first implementation of this networking design will likely triage the handsh
 \subsection{Routing}
 
 Note that since routing is transport-dependent, there are no message-level semantics, other than Arvo emitting oaths to its local Vere to indicate interest or disinterest in routing messages to a ship.
+
+\pagebreak{}
 
 \begin{lstlisting}[style=listingcode]
 path:  /~rovnys/1/2/a/a/~2023.1.10/lane/~wicdev/5/6
@@ -450,4 +455,5 @@ value: :+  ~  %udp-ipv4
 
 \selectlanguage{USenglish}
 \printbibliography
+\afterpage{\blankpage}
 \end{document}
